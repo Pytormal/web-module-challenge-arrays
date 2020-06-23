@@ -40,9 +40,9 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors(/*code here*/) {
+function is31Flavors(arr) {
 
-    console.log(originalFlavors.length === 31)
+    console.log(arr.length === 31)
 }
 
 is31Flavors(originalFlavors)
@@ -113,15 +113,17 @@ Hint: You can use .splice() for this
 
 function removeFlavorByName(arr, I) {
 
-    var search_term = I;
-
     for (var i = arr.length - 1; i >= 0; i--) {
-        if (arr[i] === search_term) {
-            arr = arr.filter(e => e !== I);
-          
+        if (arr[i] === I) {
+            arr = arr.filter(v => v !== I);
+
         }
     }
+
+    // var arr = (arr.splice(I) > -1);
+
     console.log(arr)
+
 }
 removeFlavorByName(originalFlavors, "Vanilla")
 
@@ -154,12 +156,24 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/) {
+// function filterByWord(arr, I) {
+//     newArr = []
 
-    /*code here*/
+//     var search_term = I;
 
-}
+//     for (var i = arr.length - 1; i >= 0; i--) {
+//         if (newArr[i] === search_term) {
 
+// arr = arr.includes(e => e !== newArr.push(I));
+
+//         }
+
+//     } 
+
+
+// console.log(arr)
+// }
+// filterByWord(originalFlavors, "Chocolate")
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/
